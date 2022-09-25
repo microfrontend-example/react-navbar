@@ -614,18 +614,27 @@ System.register(['react', 'react-dom', 'single-spa'], function (e, t) {
                           children: [
                             (0, v.jsx)('li', {
                               children: (0, v.jsx)('a', {
-                                style: { cursor: 'pointer' },
-                                onClick: function () {
-                                  return (0, b.navigateToUrl)('/');
+                                href: '/',
+                                style: {
+                                  cursor: 'pointer',
+                                  color: 'var(--white)',
+                                },
+                                onClick: function (e) {
+                                  e.preventDefault(), (0, b.navigateToUrl)('/');
                                 },
                                 children: 'React list',
                               }),
                             }),
                             (0, v.jsx)('li', {
                               children: (0, v.jsx)('a', {
-                                style: { cursor: 'pointer' },
-                                onClick: function () {
-                                  return (0, b.navigateToUrl)('/form');
+                                href: '/form',
+                                style: {
+                                  cursor: 'pointer',
+                                  color: 'var(--white)',
+                                },
+                                onClick: function (e) {
+                                  e.preventDefault(),
+                                    (0, b.navigateToUrl)('/form');
                                 },
                                 children: 'Angular form',
                               }),
